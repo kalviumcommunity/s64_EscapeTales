@@ -16,7 +16,7 @@
 3. **Appeal to a Broad Audience**: Make the project accessible and enjoyable for both casual and experienced players.
 
 ## Technologies
-- **Frontend**: HTML, CSS (for web designing and all).
+- **Frontend** :- HTML, CSS (for web designing and all)
 - **Backend**: Node.js, Express.js, and JavaScript (for web-based experiences).
 - **Database**: Firebase or MongoDB (for saving player progress and choices).
 - **Hosting**: Vercel (for hosting).
