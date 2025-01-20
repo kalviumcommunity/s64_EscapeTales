@@ -13,7 +13,7 @@
 ## Goals
 1. **Create Immersive Experiences**: Blend storytelling and puzzles seamlessly.
 2. **Foster Collaboration**: Encourage teamwork through group play options.
-3. **Appeal to a Broad Audience**: Make the project accessible and enjoyable for both casual and experienced players.
+3. **Appeal to a Broad Audience**: Make the project accessible and enjoyable for both casual and experience players.
 
 ## Technologies
 - **Frontend** :- HTML, CSS (for web designing and all)
