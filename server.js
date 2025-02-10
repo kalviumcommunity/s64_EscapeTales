@@ -1,10 +1,13 @@
 const express = require("express");
-const connectDB = require("./MongoDB");
+const cors = require("cors");
+const connectDB = require("./MongoDB"); // Import the MongoDB connection function
+require("dotenv").config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+app.use(express.json());
+app.use(cors());
 
-// Connect to MongoDB
+// Connect to MongoDB Atlas
 connectDB();
 const mongoose = require("mongoose");
 require("dotenv").config(); // Load environment variables
@@ -14,17 +17,7 @@ const Mongo_URL = process.env.MONGO_URL; // Ensure your .env file contains MONGO
 mongoose.connect(Mongo_URL);
 
 
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-});
+app.use("/api", require("./routes"));  // Import and use routes
 
-const db = mongoose.connection;
-
-db.on("error", (err) => console.error("MongoDB connection error:", err));
-db.once("open", () => console.log("Connected to MongoDB successfully"));
-
-app.get("/", (req, res) => {
-    const dbStatus = mongoose.connection.readyState === 1 ? "Connected" : "Not Connected";
-    res.json({ databaseStatus: dbStatus });
-});
-
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
