@@ -13,6 +13,11 @@ const Mongo_URL = process.env.MONGO_URL; // Ensure your .env file contains MONGO
 
 mongoose.connect(Mongo_URL);
 
+
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
+
 const db = mongoose.connection;
 
 db.on("error", (err) => console.error("MongoDB connection error:", err));
@@ -22,3 +27,4 @@ app.get("/", (req, res) => {
     const dbStatus = mongoose.connection.readyState === 1 ? "Connected" : "Not Connected";
     res.json({ databaseStatus: dbStatus });
 });
+
