@@ -1,0 +1,146 @@
+.landing-page {
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+}
+
+.nav {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a855f7;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #a855f7;
+}
+
+.hero {
+  padding: 5rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #a855f7;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #7c3aed;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #6d28d9;
+}
+
+.cta-button .icon {
+  margin-left: 0.5rem;
+}
+
+.features {
+  padding: 4rem 1.5rem;
+  background-color: #1f2937;
+}
+
+.features-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  background-color: #111827;
+  border-radius: 0.5rem;
+}
+
+.feature-icon-wrapper {
+  margin-bottom: 1rem;
+}
+
+.feature-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #a855f7;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
