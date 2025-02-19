@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
@@ -21,11 +22,11 @@ const Navbar = () => {
 
         {/* Navigation links */}
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <a href="/" className="nav-link">Home</a>
-          <a href="/stories" className="nav-link">Stories</a>
-          <a href="/puzzles" className="nav-link">Puzzles</a>
-          <a href="/about" className="nav-link">About</a>
-          <button className="nav-button">Play Now</button>
+          <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
+          <Link to="/stories" className="nav-link" onClick={() => setIsMenuOpen(false)}>Stories</Link>
+          <Link to="/puzzles" className="nav-link" onClick={() => setIsMenuOpen(false)}>Puzzles</Link>
+          <Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</Link>
+          <Link to="/play" className="nav-button" onClick={() => setIsMenuOpen(false)}>Play Now</Link>
         </div>
       </div>
     </nav>
