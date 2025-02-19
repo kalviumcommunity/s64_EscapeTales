@@ -14,4 +14,7 @@ const StoryCard = ({ title, description, image }) => {
   );
 };
 
+
 export default StoryCard;
+
+
