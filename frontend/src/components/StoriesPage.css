@@ -4,7 +4,7 @@
     background-color: #121212;
     color: white;
     min-height: 100vh; /* Ensures full-page background */
-    width: 105%;
+    width: 100vw;
   }
   
   .page-title {
@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+    color: rgb(185, 96, 248);
   }
   
   

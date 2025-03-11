@@ -50,6 +50,7 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  color: rgb(185, 96, 248);
 }
 
 .highlight {
@@ -58,7 +59,7 @@
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #9ca3af;
+  color: #9ba2ad;
   margin-bottom: 2rem;
 }
 

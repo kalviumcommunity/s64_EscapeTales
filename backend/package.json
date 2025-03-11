@@ -4,15 +4,15 @@
     "description": "*Escape Tales* is an immersive project centered around the concept of storytelling through escape-room-style puzzles. Combining narrative depth with challenging problem-solving elements, the project aims to engage participants in an interactive and memorable experience. Each tale unravels as participants solve puzzles, uncover secrets, and make choices that influence the story's outcome.",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-      "dotenv": "^16.4.7",
-      "express": "^4.21.2",
-      "mongoose": "^8.9.5",
-      "nodemon": "^3.1.9"
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "mongoose": "^8.12.1",
+        "nodemon": "^3.1.9"
     }
-  }
-  
+}

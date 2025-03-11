@@ -1,42 +1,101 @@
-#root {
-  height: 100%;
+body {
   margin: 0;
   padding: 0;
+  background-color: #0b0f19;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.navbar {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  padding: 0rem 1rem;
+  background-color: rgba(15, 20, 35, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #8a5cf1;
+}
+
+.btn-primary {
+  background-color: #8a5cf1;
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6d41c8;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0b0f19 0%, #162447 100%);
+}
+
+.hero h1 {
+  color: #8a5cf1;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  color: #b0b8d4;
+  margin: 1rem 0;
+}
+
+.hero .btn-primary {
+  margin-top: 1rem;
+  box-shadow: 0 4px 20px rgba(138, 92, 241, 0.6);
+}
+
+.core-features {
+  background-color: #121826;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.core-features h2 {
+  color: #ffffff;
+  margin-bottom: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.feature-card {
+  background-color: rgba(20, 25, 45, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(138, 92, 241, 0.5);
 }
 
-.card {
-  padding: 2em;
+.feature-card h3 {
+  color: #8a5cf1;
+  margin-bottom: 0.5rem;
 }
 
-.read-the-docs {
-  color: #888;
+.feature-card p {
+  color: #b0b8d4;
+  font-size: 0.95rem;
 }
