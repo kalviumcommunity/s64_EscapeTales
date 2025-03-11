@@ -35,12 +35,12 @@
   
   p {
     font-size: 1rem;
-    color: #eee;
+    color: #ffffff;
     margin-bottom: 15px;
   }
   
   /* Read More Button */
-  .read-more {
+  /* .read-more {
     background-color: #ffcc00;
     color: black;
     border: none;
@@ -57,5 +57,154 @@
   .read-more:hover {
     background-color: #ffaa00;
     transform: translateY(-3px);
+  }
+  
+  .story-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .update-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .update-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #F44336;
+    color: white;
+  }
+  
+  .edit-title-input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+  }
+  
+  .save-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background-color: #F44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .update-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .update-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #F44336;
+    color: white;
+  }
+   */
+
+   .story-card {
+    background: #1E1E2F;
+    border: 2px solid rgb(185, 96, 248);
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .story-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .story-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .story-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .story-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .edit-input,
+  .edit-textarea {
+    width: 100%;
+    padding: 8px 10px 10px;
+    margin-bottom: 15px;
+    margin-left: -11px;
+    border: 2px solid rgb(185, 96, 248);
+    border-radius: 8px;
+    background-color: #2D2D3F;
+    color: #fff;
+  }
+  
+  .save-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background-color: #F44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .update-btn,
+  .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .update-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #F44336;
+    color: white;
+    margin: 20px;
   }
   
