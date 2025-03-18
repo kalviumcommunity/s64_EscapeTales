@@ -3,17 +3,17 @@ const mongoose = require("mongoose");
 const StorySchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
+        required: [true, "Title is required"],
         trim: true,
     },
     author: {
         type: String,
-        required: true,
+        required: [true, "Author is required"],
         trim: true,
     },
     content: {
         type: String,
-        required: true,
+        required: [true, "Content is required"],
     },
     genre: {
         type: String,
