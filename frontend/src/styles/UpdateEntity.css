@@ -4,8 +4,16 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #1a1a2e;
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: #e0e0e0;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 h2 {
@@ -34,6 +42,12 @@ input, textarea {
     color: #e0e0e0;
     outline: none;
     resize: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00fff5;
+    box-shadow: 0 0 8px #00fff5;
 }
 
 button {
@@ -45,6 +59,7 @@ button {
     transition: background 0.3s;
     color: #1a1a2e;
     font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 173, 181, 0.5);
 }
 
 button:hover {

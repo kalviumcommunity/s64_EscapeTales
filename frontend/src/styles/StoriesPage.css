@@ -1,0 +1,61 @@
+.stories-page {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgb(185, 96, 248);
+    text-shadow: 0 0 15px rgba(185, 96, 248, 0.8); /* Glow effect */
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.stories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Story Card Enhancements */
+.story-card {
+    background: rgba(255, 255, 255, 0.08); /* Glassy effect */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(185, 96, 248, 0.3); /* Hover animation */
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .stories-container {
+        gap: 15px;
+    }
+}

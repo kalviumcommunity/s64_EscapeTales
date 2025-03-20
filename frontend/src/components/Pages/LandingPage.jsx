@@ -1,22 +1,13 @@
 import React from 'react';
-import { ChevronRight, Clock, Puzzle, Book, Menu } from 'lucide-react';
-import './LandingPage.css';
-import Navbar from './Navbar';
-import Footer from '../components/Footer';
+import { ChevronRight, Clock, Puzzle, Book } from 'lucide-react';
+import '../../styles/LandingPage.css';
+import Navbar from '../Common/Navbar';
+import Footer from '../Common/Footer';
 
 const LandingPage = () => {
-    return (
-      <div className="landing-page">
-        <Navbar />
-      <nav className="nav">
-        <h1 className="logo">EscapeTales</h1>
-        <Menu className="menu-icon" />
-        <div className="nav-links">
-          <a href="#features">Features</a>
-          <a href="#stories">Stories</a>
-          <a href="#start">Get Started</a>
-        </div>
-      </nav>
+  return (
+    <div className="landing-page">
+      <Navbar />
 
       <div className="hero">
         <div className="hero-content">
@@ -27,10 +18,10 @@ const LandingPage = () => {
           <p className="hero-subtitle">
             Immerse yourself in interactive adventures where your decisions shape the story.
           </p>
-          <button className="cta-button">
+          <a href="/play" className="cta-button">
             Begin Your Adventure
             <ChevronRight className="icon" />
-          </button>
+          </a>
         </div>
       </div>
 
@@ -55,9 +46,8 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Footer Section */}
       <Footer />
-      </div>
+    </div>
   );
 };
 

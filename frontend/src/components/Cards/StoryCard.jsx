@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./StoryCard.css";
+import "../../styles/StoryCard.css";
 
 const StoryCard = ({ id, title, description, image, onUpdate, onDelete }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -9,15 +9,39 @@ const StoryCard = ({ id, title, description, image, onUpdate, onDelete }) => {
   const [newImage, setNewImage] = useState(image);
   const [newDescription, setNewDescription] = useState(description);
 
+  // Error states for validation
+  const [errors, setErrors] = useState({});
+
   const handleEditToggle = () => setIsEditing(!isEditing);
 
+  const validateInputs = () => {
+    const newErrors = {};
+
+    if (!newTitle.trim()) newErrors.title = "Title is required.";
+    else if (newTitle.length < 3 || newTitle.length > 50)
+      newErrors.title = "Title must be 3-50 characters long.";
+
+    if (!newImage.trim()) newErrors.image = "Image URL is required.";
+    else if (!/^https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp)$/.test(newImage))
+      newErrors.image = "Invalid image URL format.";
+
+    if (!newDescription.trim()) newErrors.description = "Description is required.";
+    else if (newDescription.length < 10 || newDescription.length > 300)
+      newErrors.description = "Description must be 10-300 characters long.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSave = () => {
-    onUpdate(id, {
-      title: newTitle,
-      image: newImage,
-      description: newDescription
-    });
-    setIsEditing(false);
+    if (validateInputs()) {
+      onUpdate(id, {
+        title: newTitle,
+        image: newImage,
+        description: newDescription,
+      });
+      setIsEditing(false);
+    }
   };
 
   const handleCancel = () => {
@@ -25,6 +49,7 @@ const StoryCard = ({ id, title, description, image, onUpdate, onDelete }) => {
     setNewImage(image);
     setNewDescription(description);
     setIsEditing(false);
+    setErrors({});
   };
 
   return (
@@ -38,6 +63,8 @@ const StoryCard = ({ id, title, description, image, onUpdate, onDelete }) => {
             placeholder="Image URL"
             className="edit-input"
           />
+          {errors.image && <p className="error-text">{errors.image}</p>}
+
           <input
             type="text"
             value={newTitle}
@@ -45,12 +72,15 @@ const StoryCard = ({ id, title, description, image, onUpdate, onDelete }) => {
             placeholder="Title"
             className="edit-input"
           />
+          {errors.title && <p className="error-text">{errors.title}</p>}
+
           <textarea
             value={newDescription}
             onChange={(e) => setNewDescription(e.target.value)}
             placeholder="Description"
             className="edit-textarea"
           />
+          {errors.description && <p className="error-text">{errors.description}</p>}
         </>
       ) : (
         <>
